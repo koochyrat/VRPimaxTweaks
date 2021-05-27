@@ -3,12 +3,8 @@ using System.IO;
 using HarmonyLib;
 using QModManager.API.ModLoading;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 using UnityEngine.XR;
 using System.Reflection;
-using UWE;
-using System.Collections;
 using Valve.VR;
 
 namespace VRPimaxTweaks
