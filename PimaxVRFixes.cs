@@ -86,14 +86,14 @@ namespace VRPimaxTweaks
                     projectionMatrix.m22 = -(m_Camera.farClipPlane + m_Camera.nearClipPlane) / (m_Camera.farClipPlane - m_Camera.nearClipPlane);
                     projectionMatrix.m23 = -2 * m_Camera.farClipPlane * m_Camera.nearClipPlane / (m_Camera.farClipPlane - m_Camera.nearClipPlane);
                     projectionMatrix.m32 = -1;
-                    File.AppendAllText("VRTweaksLog.txt", "Pimax culling fix " + (eyeYawAngle * Mathf.Rad2Deg) + " deg" + Environment.NewLine);
+                    File.AppendAllText("VRPimaxTweaksLog.txt", "Pimax culling fix " + (eyeYawAngle * Mathf.Rad2Deg) + " deg" + Environment.NewLine);
                 }
                 else
                     isCantedFov = false;
             }
             catch (Exception e)
             {
-                File.AppendAllText("VRTweaksLog.txt", "Pimax error " + e.Message + Environment.NewLine + e.StackTrace + Environment.NewLine);
+                File.AppendAllText("VRPimaxTweaksLog.txt", "Pimax error " + e.Message + Environment.NewLine + e.StackTrace + Environment.NewLine);
             }
         }
     }
