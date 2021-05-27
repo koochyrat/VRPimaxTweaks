@@ -22,22 +22,9 @@ namespace VRPimaxTweaks
             }
             File.AppendAllText("VRPimaxTweaksLog.txt", "Initializing" + Environment.NewLine);
 
-            new GameObject("_VRPimaxTweaks").AddComponent<PimaxVRFixes>();
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "VRPimaxTweaks");
 
             File.AppendAllText("VRPimaxTweaksLog.txt", "Done Initializing" + Environment.NewLine);
-        }
-    }
-    public class PimaxVRFixes : MonoBehaviour
-    {
-        public PimaxVRFixes()
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-
-        internal void Awake()
-        {
-            File.AppendAllText("VRPimaxTweaksLog.txt", "PimaxVRFixes Started" + Environment.NewLine);
         }
     }
 
