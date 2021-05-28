@@ -121,16 +121,4 @@ namespace VRPimaxTweaks
             return false;
         }
     }
-
-    [HarmonyPatch(typeof(uGUI_HealthBar), "Awake")]
-    public static class HUDFixer
-    {
-        [HarmonyPostfix]
-        public static void Postfix(uGUI_HealthBar __instance)
-        {
-            //original VRTweaks will add 300 which overlaps with toolbar.
-            //subtract 70 from it so we get 230 overall which fits just nice for Pimax
-            __instance.transform.parent.localPosition -= new Vector3(70, 0, 0);
-        }
-    }
 }
