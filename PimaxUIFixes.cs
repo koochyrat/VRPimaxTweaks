@@ -24,7 +24,7 @@ namespace VRPimaxTweaks
     public static class HUDFixer
     {
         public static bool isFixed;
-        public static Vector3 offset = new Vector3(230, -300, 0);
+        public static Vector3 offset = new Vector3(100, -100, 0);
         public static uGUI_HealthBar instance;
         [HarmonyPostfix]
         public static void Postfix(uGUI_HealthBar __instance)
@@ -32,9 +32,10 @@ namespace VRPimaxTweaks
             if (!isFixed)
             {
                 __instance.transform.parent.localPosition += offset;
+                __instance.transform.parent.localScale = 0.5f * Vector3.one;
                 instance = __instance;
                 isFixed = true;
-                MiscSettings.SetUIScale(0.4f);
+                //MiscSettings.SetUIScale(0.4f);
             }
         }
         public static void Reset()
@@ -49,14 +50,15 @@ namespace VRPimaxTweaks
     public static class ToolbarFixer
     {
         public static bool isFixed;
-        public static Vector3 offset = new Vector3(0, -200, 0);
+        public static Vector3 offset = new Vector3(0, -100, 0);
         public static uGUI_QuickSlots instance;
         [HarmonyPostfix]
         public static void Postfix(uGUI_QuickSlots __instance)
         {
-            if (!isFixed)
+            if (!isFixed && __instance._rectTransform)
             {
                 __instance._rectTransform.localPosition += offset;
+                __instance._rectTransform.localScale = 0.6f * Vector3.one;
                 instance = __instance;
                 isFixed = true;
             }
@@ -73,7 +75,7 @@ namespace VRPimaxTweaks
     public static class CompassFixer
     {
         public static bool isFixed;
-        public static Vector3 offset = new Vector3(0, -1000, 0);
+        public static Vector3 offset = new Vector3(0, -590, 0);
         public static uGUI_Compass instance;
         [HarmonyPostfix]
         public static void Postfix(uGUI_Compass __instance)
@@ -81,6 +83,7 @@ namespace VRPimaxTweaks
             if (!isFixed)
             {
                 __instance.transform.parent.localPosition += offset;
+                __instance.transform.parent.localScale = 0.4f * Vector3.one;
                 instance = __instance;
                 isFixed = true;
             }
@@ -97,7 +100,7 @@ namespace VRPimaxTweaks
     public static class SeaTruckHUDFixer
     {
         public static bool isFixed;
-        public static Vector3 offset = new Vector3(-450, -300, 0);
+        public static Vector3 offset = new Vector3(0, -280, 0);
         public static uGUI_SeaTruckHUD instance;
         [HarmonyPostfix]
         public static void Postfix(uGUI_SeaTruckHUD __instance)
@@ -105,6 +108,7 @@ namespace VRPimaxTweaks
             if (!isFixed)
             {
                 __instance.root.transform.localPosition += offset;
+                __instance.root.transform.localScale = 0.4f * Vector3.one;
                 instance = __instance;
                 isFixed = true;
             }
@@ -121,7 +125,7 @@ namespace VRPimaxTweaks
     public static class ExosuitHUDFixer
     {
         public static bool isFixed;
-        public static Vector3 offset = new Vector3(-450, -300, 0);
+        public static Vector3 offset = new Vector3(-250, -140, 0);
         public static uGUI_ExosuitHUD instance;
         [HarmonyPostfix]
         public static void Postfix(uGUI_ExosuitHUD __instance)
@@ -129,6 +133,7 @@ namespace VRPimaxTweaks
             if (!isFixed)
             {
                 __instance.root.transform.localPosition += offset;
+                __instance.root.transform.localScale = 0.4f * Vector3.one;
                 instance = __instance;
                 isFixed = true;
             }
@@ -145,7 +150,7 @@ namespace VRPimaxTweaks
     public static class HoverbikeHUDFixer
     {
         public static bool isFixed;
-        public static Vector3 offset = new Vector3(-450, -300, 0);
+        public static Vector3 offset = new Vector3(-300, -200, 0);
         public static uGUI_HoverbikeHUD instance;
         [HarmonyPostfix]
         public static void Postfix(uGUI_HoverbikeHUD __instance)
@@ -153,6 +158,7 @@ namespace VRPimaxTweaks
             if (!isFixed)
             {
                 __instance.root.transform.localPosition += offset;
+                __instance.root.transform.localScale = 0.4f * Vector3.one;
                 instance = __instance;
                 isFixed = true;
             }
@@ -169,7 +175,7 @@ namespace VRPimaxTweaks
     public static class SeaTruckSegmentFixer
     {
         public static bool isFixed;
-        public static Vector3 offset = new Vector3(800, -580, 0);
+        public static Vector3 offset = new Vector3(480, -230, 0);
         public static uGUI_SeaTruckSegment instance;
         [HarmonyPostfix]
         public static void Postfix(uGUI_SeaTruckSegment __instance)
@@ -177,7 +183,7 @@ namespace VRPimaxTweaks
             if (!isFixed)
             {
                 __instance.transform.parent.localPosition += offset;
-                __instance.transform.parent.localScale = 0.4f * Vector3.one;
+                __instance.transform.parent.localScale = 0.6f * Vector3.one;
                 instance = __instance;
                 isFixed = true;
             }
