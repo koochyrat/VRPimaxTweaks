@@ -1,9 +1,10 @@
 # VRPimaxTweaks
 Subnautica: Below Zero mod to fix culling at edges and double UI for Pimax without having to turn on parallel projections mode. Use together with the main VRTweaks mod. 
 
-Also shrinks the UI and move it to the bottom. Minimal UI for maximum FOV.
+Also shrinks the UI and move it to the bottom. Minimal UI for maximum FOV. Use version 1.0.x if you just want the Pimax fixes without these UI changes.
 
 Install the main VRTweaks mod first. Then unzip this mod into your Subnautica folder.
+
 
 If you want to build from source:
 1) Install VRTweaks and VRPimaxTweaks mod
