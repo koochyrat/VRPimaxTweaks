@@ -13,3 +13,6 @@ If you want to build from source:
 4) (You can also edit the .csproj file by hand to point to the correct assemblies)
 5) Change the post-build event paths to point to your Subnautica mods folder
 6) Build the project
+
+For original Subnautica, Cheesyhobo has ported this fix over at:
+https://www.nexusmods.com/subnautica/mods/1144
